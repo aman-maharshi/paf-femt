@@ -1,4 +1,5 @@
 import React from 'react'
+import HeaderSearchMenu from './HeaderSearchMenu'
 
 function Header() {
   return (
@@ -10,6 +11,8 @@ function Header() {
         </div>
         <button className='px-3 pb-[2px] border border-white rounded-md ml-4 text-base'>Click Here</button>
       </div>
+
+      <HeaderSearchMenu />
     </>
   )
 }
