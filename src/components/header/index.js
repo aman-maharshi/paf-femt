@@ -1,9 +1,12 @@
 import React from 'react'
 import HeaderSearchMenu from './HeaderSearchMenu'
+import HeaderNav from './HeaderNav'
 
 function Header() {
   return (
     <>
+      <HeaderNav />
+
       <div className='p-4 flex justify-center items-center bg-slate-800 text-white'>
         <div className='flex items-center gap-4'>
           <div className='bg-red-500 h-4 w-4 border rounded-full'></div>
