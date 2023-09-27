@@ -21,13 +21,13 @@ function Hero() {
       </div>
 
       <div className="mt-4">
-        <p className="mb-4">Share this series:</p>
+        <p className="mb-3">Share this series:</p>
         
-        <div className="flex items-center gap-8">
-          <FaFacebookF className="text-[22px]" />
-          <FaTwitter className="text-[22px]" />
-          <FaWhatsapp className="text-[22px]" />
-          <FaLinkedinIn className="text-[22px]" />
+        <div className="flex items-center gap-10">
+          <FaFacebookF className="text-[26px] text-[#3E6FA7]" />
+          <FaTwitter className="text-[26px] text-[#08BBEE]" />
+          <FaWhatsapp className="text-[26px] text-[#06BA27]" />
+          <FaLinkedinIn className="text-[26px] text-[#0A66C2]" />
         </div>
       </div>
     </div>
