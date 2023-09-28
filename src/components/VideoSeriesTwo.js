@@ -2,7 +2,7 @@ import React from 'react'
 
 function VideoSeriesTwo() {
   return (
-    <div className='md:px-8 px-4 py-4 mt-4'>
+    <div className='lg:px-8 px-4 py-4 mt-4'>
       <h2 className='text-[20px] font-medium pb-4 border-b border-gray-300'>Other Helpful Video Series</h2>
 
       <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>

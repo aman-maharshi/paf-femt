@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaWhatsapp, FaLinkedinIn, FaLink} from "react-i
 
 function Hero() {
   return (
-    <div className="md:px-8 px-4 py-4">
+    <div className="lg:px-8 px-4 py-4">
       <div className="flex items-center gap-2 text-slate-700 text-[14px]">Home <IoIosArrowForward className="text-slate-700" /> संतवाणी</div>
       
       <div className="mt-4">
