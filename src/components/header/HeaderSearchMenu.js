@@ -10,8 +10,8 @@ function HeaderSearchMenu() {
           All 
           <AiFillCaretDown className='text-slate-600 text-[14px]' />
         </button>
-        <div className='border flex'>
-          <input className='p-2 w-[450px]' type="text" placeholder='Search for the video series' />
+        <div className='flex'>
+          <input className='p-2 md:w-[450px]' type="text" placeholder='Search for the video series' />
           <button className='p-2 border bg-[#FED7AA] rounded-e-md'>
             <AiOutlineSearch />
           </button>

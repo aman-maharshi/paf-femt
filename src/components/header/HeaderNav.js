@@ -4,7 +4,7 @@ import { BsTelephone } from "react-icons/bs"
 
 function HeaderNav() {
   return (
-    <nav className='flex items-center justify-between px-8 py-2 bg-[#D24115] text-white'>
+    <nav className='flex items-center justify-between md:px-8 px-4 py-2 bg-[#D24115] text-white'>
       <div className='flex items-center'>
         <a href="#" className='px-2 py-1 flex gap-4 items-center'>
           <div className='h-7 w-7 rounded-full bg-gray-400'></div>
