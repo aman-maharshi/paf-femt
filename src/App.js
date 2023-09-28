@@ -10,12 +10,14 @@ import Header from "./components/header";
 function App() {
   const [courses, setCourses] = useState([])
   const [relatedContent, setRelatedContent] = useState([])
+  const [loadingCourses, setLoadingCourses] = useState(false)
 
   useEffect(() => {
     getCoursesData()
   }, [])
 
   const getCoursesData = async () => {
+    setLoadingCourses(true)
     try {
       const response = await fetch('https://api.acharyaprashant.org/v2/legacy/courses/series/optuser/course-series-eeb9d3')
       if (response.ok) {
@@ -27,6 +29,7 @@ function App() {
     } catch (error) {
       console.log(error)
     }
+    setLoadingCourses(false)
   }
   
 
