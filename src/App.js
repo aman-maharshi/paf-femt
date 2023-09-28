@@ -1,4 +1,5 @@
 import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import VideoSeriesOne from "./components/VideoSeriesOne";
 import VideoSeriesTwo from "./components/VideoSeriesTwo";
@@ -12,6 +13,7 @@ function App() {
       <VideoSeriesOne />
       <VideoSeriesTwo />
       <Faq />
+      <Footer />
     </div>
   )
 }
