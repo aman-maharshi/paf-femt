@@ -17,7 +17,7 @@ function VideoSeriesOne({ data }) {
           const {id, title, subtitle, thumbnail, language, amount, originalAmount, courseHours, series } = item
 
           return (
-            <div key={id} className='flex flex-col items-start p-4 gap-1 cursor-pointer hover:bg-slate-100 border-b border-gray-200 rounded-md'>
+            <div key={id} className='flex flex-col items-start md:px-4 px-0 py-4  gap-1 cursor-pointer md:hover:bg-slate-100 border-b border-gray-200 rounded-md'>
               <div className='bg-slate-400 text-[14px] text-white py-1 px-2 rounded-md mb-2'>भाग {series?.order?.seq}</div>
               <h3 className='font-medium'>{title}</h3>
               <div className='text-gray-500'>{subtitle}</div>
