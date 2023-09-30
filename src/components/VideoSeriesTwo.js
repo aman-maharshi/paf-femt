@@ -14,7 +14,7 @@ function VideoSeriesTwo({ data }) {
           return (
             <div key={id} className='grid grid-cols-3 gap-4 md:px-4 px-0 py-4 cursor-pointer md:hover:bg-slate-100 border-b border-gray-200 rounded-md'>
               <div className='col-span-1 h-[100px] bg-gray-200 rounded-md'>
-                <img src={imagePath} className='w-full object-cover rounded-md' alt="thumbnail" />
+                <img src={imagePath} className='w-full h-full object-cover rounded-md' alt="thumbnail" />
               </div>
               <div className='col-span-2'>
                 <h3 className='text-[18px] mb-1'>{title}</h3>

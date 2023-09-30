@@ -5,7 +5,6 @@ import { PiHandsPrayingDuotone } from "react-icons/pi"
 
 function HeaderNav() {
   const isMobile = window.innerWidth <= 768
-  console.log(isMobile, "isMobile")
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const handleMenuClick = () => {
@@ -74,6 +73,13 @@ function HeaderNav() {
               Donate
             </button>
           </div>
+        </div>
+      )}
+
+      {isMobile && (
+        <div className='fixed z-10 bottom-0 left-0 w-full py-2 px-4 bg-[#ffedd5] text-slate-600 flex items-center justify-between font-semibold text-[16px]'>
+          Open in App
+          <button className='py-2 px-4 text-[14px] text-white bg-[#D24115] rounded-full'>Download App</button>
         </div>
       )}
     </nav>
