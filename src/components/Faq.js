@@ -1,8 +1,29 @@
-import React from 'react'
-import { BsChevronDown } from "react-icons/bs"
-
+import React, {useState, useEffect} from 'react'
+import FaqCard from './FaqCard'
 
 function Faq() {
+  const [faqs, setFaqs] = useState([])
+  const [loadingFaqs, setLoadingFaqs] = useState(false)
+
+  useEffect(() => {
+    getFaqs()
+  }, [])
+
+  const getFaqs = async () => {
+    setLoadingFaqs(true)
+    try {
+      const response = await fetch('https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=hindi')
+      if (response.ok) {
+        const data = await response.json()
+        // console.log(data)
+        setFaqs(data)
+      } 
+    } catch (error) {
+      console.log(error)
+    }
+    setLoadingFaqs(false)
+  }
+
   return (
     <div className='lg:px-20 px-4 py-4 mt-4'>
       <div className='grid lg:grid-cols-3 grid-cols-1'>
@@ -13,23 +34,8 @@ function Faq() {
           </div>
         </div>
 
-        <div className='col-span-2 text-slate-600 font-bold'>
-          <div className='relative pr-20 pb-4 border-b border-gray-300 cursor-pointer mb-4'>
-            कोई भी वीडियो श्रृंखला आचार्य प्रशांत के यूट्यूब वीडियो से कैसे अलग है?
-            <BsChevronDown className='text-gray-500 text-[14px] absolute right-4 top-1' />
-          </div>
-          <div className='relative pr-20 pb-4 border-b border-gray-300 cursor-pointer mb-4'>
-            कोई भी वीडियो श्रृंखला आचार्य प्रशांत के यूट्यूब वीडियो से कैसे अलग है?
-            <BsChevronDown className='text-gray-500 text-[14px] absolute right-4 top-1' />
-          </div>
-          <div className='relative pr-20 pb-4 border-b border-gray-300 cursor-pointer mb-4'>
-            कोई भी वीडियो श्रृंखला आचार्य प्रशांत के यूट्यूब वीडियो से कैसे अलग है?
-            <BsChevronDown className='text-gray-500 text-[14px] absolute right-4 top-1' />
-          </div>
-          <div className='relative pr-20 pb-4 border-b border-gray-300 cursor-pointer mb-4'>
-            कोई भी वीडियो श्रृंखला आचार्य प्रशांत के यूट्यूब वीडियो से कैसे अलग है?
-            <BsChevronDown className='text-gray-500 text-[14px] absolute right-4 top-1' />
-          </div>
+        <div className='col-span-2 text-slate-600'>
+          {faqs.map((item, index) => <FaqCard key={index} item={item} />)}
         </div>
       </div>
     </div>
