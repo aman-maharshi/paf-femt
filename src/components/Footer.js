@@ -1,7 +1,8 @@
 import React from 'react'
-import {FiMail} from "react-icons/fi"
-import {FaWhatsapp} from "react-icons/fa"
-import {BsFillTelephoneFill} from "react-icons/bs"
+import { FiMail } from "react-icons/fi"
+import { FaWhatsapp, FaFacebookF } from "react-icons/fa"
+import { BsFillTelephoneFill, BsWikipedia } from "react-icons/bs"
+import { AiFillYoutube, AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai"
 
 function Footer() {
   return (
@@ -37,9 +38,35 @@ function Footer() {
         </div>
         <div>
           <h3 className='mb-4'>SOCIAL MEDIA</h3>
+          <div className='mb-2'>For English</div>
+          <div className='flex items-center gap-2'>
+            <a href="#"><AiFillYoutube className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><AiOutlineTwitter className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><FaFacebookF className='text-white text-[16px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><AiOutlineInstagram className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><BsWikipedia className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+          </div>
+          <div className='mt-4 mb-2'>For Hindi</div>
+          <div className='flex items-center gap-2'>
+            <a href="#"><AiFillYoutube className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><AiOutlineTwitter className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><FaFacebookF className='text-white text-[16px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><AiOutlineInstagram className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+            <a href="#"><BsWikipedia className='text-white text-[20px] hover:text-[#D24115] cursor-pointer' /></a>
+          </div>
         </div>
         <div>
           <h3 className='mb-4'>DOWNLOAD APP</h3>
+          <div className='flex items-center gap-2'>
+            <div className='h-6 w-6 rounded-full bg-gray-400'></div>
+            Acharya Prashant
+          </div>
+          <a href="#" className='w-[115px] my-4 block border border-white rounded-md'>
+            <img src="/images/ic_googleplay.png" className='w-full object-cover' alt="googleplay" />
+          </a>
+          <a href="#" className='w-[115px] my-4 block border border-white rounded-md'>
+            <img src="/images/ic_appstore.png" className='w-full object-cover' alt="appstore" />
+          </a>
         </div>
         <div>
           <h3 className='mb-4'>CONTACT US</h3>

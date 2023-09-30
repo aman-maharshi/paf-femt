@@ -35,7 +35,7 @@ function HeaderNav() {
           <BsTelephone className='text-white text-[20px]' />
         </a>
         <a href="#" className='px-2 py-1 flex items-center gap-2'>
-          <AiOutlineMenu class="text-white text-[22px]" />
+          <AiOutlineMenu className="text-white text-[22px]" />
           Menu
         </a>
       </div>

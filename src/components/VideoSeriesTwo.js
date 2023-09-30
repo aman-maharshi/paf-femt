@@ -9,6 +9,8 @@ function VideoSeriesTwo({ data }) {
 
         {data.map(item => {
           const {id, title, subtitle, thumbnail} = item
+          // console.log(`${thumbnail.domain}/${thumbnail.basePath}/${thumbnail.id}/${thumbnail.key}`)
+          
           return (
             <div key={id} className='grid grid-cols-3 gap-4 p-4 cursor-pointer hover:bg-slate-100 border-b border-gray-200 rounded-md'>
               <div className='col-span-1 h-[100px] bg-gray-200 rounded-md'></div>

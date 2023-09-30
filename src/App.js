@@ -22,7 +22,7 @@ function App() {
       const response = await fetch('https://api.acharyaprashant.org/v2/legacy/courses/series/optuser/course-series-eeb9d3')
       if (response.ok) {
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         setCourses(data?.courses)
         setRelatedContent(data?.relatedContent)
       } 
