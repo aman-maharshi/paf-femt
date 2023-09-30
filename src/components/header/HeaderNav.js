@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import { AiOutlineSearch, AiFillCaretDown, AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
+import React, { useState, useEffect } from 'react'
+import { AiFillCaretDown, AiFillCaretUp, AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 import { BsTelephone } from "react-icons/bs"
 import { PiHandsPrayingDuotone } from "react-icons/pi"
 
 function HeaderNav() {
-  const isMobile = window.innerWidth <= 768
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false)
+  const [selectedLanguage, setSelectedLanguage] = useState("EN")
 
   const handleMenuClick = () => {
     if (isMobile) {
@@ -13,7 +15,20 @@ function HeaderNav() {
     }
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      let width = window.innerWidth
+      if (width <= 768) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
+      }
+    }
+    window.addEventListener('resize' , handleResize)
 
+    return () =>  window.removeEventListener('resize', handleResize)
+  }, [])
+  
   return (
     <nav className='relative flex items-center justify-between lg:px-8 px-4 py-2 bg-[#D24115] text-white lg:text-base text-[14px]'>
       <div className='flex items-center'>
@@ -39,10 +54,17 @@ function HeaderNav() {
       </div>
       <div className='flex items-center gap-2'>
         <div className='flex items-end gap-1'>
-          <button className='px-1 border border-white rounded-sm text-[14px]'>
-            EN
+          <button onClick={() => setShowLanguageDropdown(!showLanguageDropdown)} className='relative px-1 border border-white rounded-sm text-[14px]'>
+            {selectedLanguage}
+
+            {showLanguageDropdown && (
+              <div className='absolute z-10 top-[30px] left-0 bg-white p-4 border rounded-md flex flex-col items-start gap-4 text-base text-slate-700'>
+                <div onClick={() => setSelectedLanguage("HI")} className={selectedLanguage === "HI" ? 'text-[#D24115]' : null}>Hindi</div>
+                <div onClick={() => setSelectedLanguage("EN")} className={selectedLanguage === "EN" ? 'text-[#D24115]' : null}>English</div>
+              </div>
+            )}
           </button>
-          <AiFillCaretDown className='text-white text-[14px] mb-1' />
+          {showLanguageDropdown ? <AiFillCaretUp className='text-white text-[14px] mb-1' /> : <AiFillCaretDown className='text-white text-[14px] mb-1' />}
         </div>
         <a href="#" className='px-2 py-1'>
           <BsTelephone className='text-white text-[20px]' />

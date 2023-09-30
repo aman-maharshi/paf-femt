@@ -11,7 +11,7 @@ function TagMenu({ tags }) {
 
   return (
     <div className='fixed z-10 inset-0 bg-slate-600 h-[100vh] w-[100vw] bg-opacity-70'>
-      <div className='absolute z-10 left-[9vw] top-[21vh] border rounded-lg flex h-[500px] bg-white text-slate-600 text-[18px]'>
+      <div className='absolute z-10 left-[9vw] top-[21vh] border rounded-lg flex h-[450px] bg-white text-slate-600 text-[18px]'>
         <div className='flex flex-col items-start p-4 gap-4'>
           {tags[0].map(item => {
             const { name, tagId, hasChildren, level, parent } = item
